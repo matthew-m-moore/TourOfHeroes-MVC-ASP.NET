@@ -1,0 +1,16 @@
+﻿<md-sidenav-container fullscreen>
+    <md-sidenav #start mode="side" opened="true">
+        <md-nav-list>
+            <a md-list-item routerLink="/components/dashboard" routerLinkActive="active">Dashboard</a>
+            <a md-list-item routerLink="/components/heroes" routerLinkActive="active">Heroes</a>
+        </md-nav-list>
+        <hr>
+        <button md-button (click)="start.close()">Hide Menu</button>
+    </md-sidenav>
+    <md-toolbar color="primary">
+        <button class="title-button" md-button (click)="start.open()">{{Title}}</button>
+    </md-toolbar>
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+</md-sidenav-container>
